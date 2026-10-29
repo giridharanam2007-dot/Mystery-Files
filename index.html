@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Files | Detective Unit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">🔎 MYSTERY FILES</div>
+        <div class="status">● DETECTIVE UNIT ONLINE</div>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <p class="eyebrow">CONFIDENTIAL CASE #001</p>
+            <h1>The Missing Diamond</h1>
+            <p class="subtitle">
+                A priceless diamond disappeared from a locked mansion.
+                Investigate the evidence and identify the thief.
+            </p>
+        </section>
+
+        <section class="stats">
+            <div class="stat">
+                <span>CLUES FOUND</span>
+                <strong id="clueCount">0 / 4</strong>
+            </div>
+            <div class="stat">
+                <span>ATTEMPTS LEFT</span>
+                <strong id="attempts">3</strong>
+            </div>
+            <div class="stat">
+                <span>CASE STATUS</span>
+                <strong id="caseStatus">OPEN</strong>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>📂 Crime Scene</h2>
+            <p class="hint">Inspect each location to discover evidence.</p>
+
+            <div class="locations">
+                <button class="location" data-clue="0">
+                    <span>🪟</span>
+                    <strong>The Window</strong>
+                    <small>Inspect the broken window</small>
+                </button>
+
+                <button class="location" data-clue="1">
+                    <span>🧤</span>
+                    <strong>The Gloves</strong>
+                    <small>Examine a suspicious object</small>
+                </button>
+
+                <button class="location" data-clue="2">
+                    <span>🕰️</span>
+                    <strong>The Clock</strong>
+                    <small>Check the time of the theft</small>
+                </button>
+
+                <button class="location" data-clue="3">
+                    <span>📜</span>
+                    <strong>The Note</strong>
+                    <small>Read a mysterious message</small>
+                </button>
+            </div>
+
+            <div id="clueDisplay" class="clue-display">
+                <span class="clue-icon">🔍</span>
+                <h3>Investigation Log</h3>
+                <p>Select a crime-scene location to reveal its clue.</p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>👥 Suspect Board</h2>
+            <p class="hint">Find all four clues before making your accusation.</p>
+
+            <div class="suspects">
+                <button class="suspect" data-suspect="0">
+                    <span>🧑‍💼</span>
+                    <strong>Mr. Blake</strong>
+                    <small>The Mansion Owner</small>
+                </button>
+
+                <button class="suspect" data-suspect="1">
+                    <span>👩‍🍳</span>
+                    <strong>Anna</strong>
+                    <small>The Housekeeper</small>
+                </button>
+
+                <button class="suspect" data-suspect="2">
+                    <span>🧑‍🔧</span>
+                    <strong>Daniel</strong>
+                    <small>The Gardener</small>
+                </button>
+            </div>
+
+            <p id="accusationMessage" class="message">
+                Your investigation begins now, detective.
+            </p>
+        </section>
+
+        <button id="restartButton" class="restart">↻ RESTART CASE</button>
+
+        <footer>DETECTIVE UNIT • CASE #001 • CLASSIFIED</footer>
+    </main>
+
+    <script src="game.js"></script>
+</body>
+</html>
